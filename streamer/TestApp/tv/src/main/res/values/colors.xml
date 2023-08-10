@@ -1,0 +1,4 @@
+<resources>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#000000</color>
+</resources>

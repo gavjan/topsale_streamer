@@ -1,0 +1,6 @@
+<resources>
+
+    <style name="Theme.TestApp" parent="@style/Theme.Leanback">
+        <item name="android:windowBackground">@drawable/launching_background</item>
+    </style>
+</resources>
