@@ -1,3 +1,6 @@
+# Prpare for cron
+export PATH="/home/cgev/.local/bin:$PATH"
+
 # Clean previous vidoes
 rm -f temp_video.mp4 output_video.mp4
 rm -rf .videos .stories stories vids
@@ -27,7 +30,8 @@ rm -rf .videos
 ffmpeg -y -f concat -safe 0 -i <(for f in $(find vids -type f -name "*.mp4"); do echo "file '$PWD/$f'"; done) -c:v copy -an temp_video.mp4
 
 # Rotate video
-ffmpeg -y -i temp_video.mp4 -metadata:s:v rotate="90" -codec copy output_video.mp4
+ffmpeg -y -i temp_video.mp4 -metadata:s:v rotate="90" -c:v libx264 -vf "transpose=2" -c:a copy output_video.mp4
+
 
 # Copy video to server and delete local copy
 scp output_video.mp4 mim:~/public_html/.topsale/vid.mp4

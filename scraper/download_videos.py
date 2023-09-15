@@ -2,7 +2,7 @@ import instaloader
 import os
 import requests
 
-USERNAME = "topsale.am"
+USERNAME = "topsale.am__outlet"
 COUNT = 10
 IGNORE_URL = "https://students.mimuw.edu.pl/~gc401929/.topsale/streamer/ignore.txt"
 
