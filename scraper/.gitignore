@@ -132,3 +132,5 @@ dmypy.json
 # Project specific
 *.mp4
 */*.mp4
+.videos
+vids
